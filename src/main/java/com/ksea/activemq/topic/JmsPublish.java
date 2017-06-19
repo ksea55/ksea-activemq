@@ -34,6 +34,7 @@ public class JmsPublish {
             messageProducer = session.createProducer(destination);
 
             sendMessage(session, messageProducer);
+            session.commit();
         } catch (JMSException e) {
             e.printStackTrace();
         }
