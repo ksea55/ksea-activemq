@@ -7,9 +7,9 @@ import javax.jms.*;
 
 /**
  * Created by ksea on 2017/6/19.
- * 订阅者1
+ * 订阅者2
  */
-public class JmsSubscribe1 {
+public class JmsSubscribe2 {
     //连接ActiveMQ的用户名
     private static String USERNAME = ActiveMQConnection.DEFAULT_USER;
     //连接ActiveMQ的密码
@@ -37,7 +37,7 @@ public class JmsSubscribe1 {
                 public void onMessage(Message message) {
                     try {
                         TextMessage textMessage = (TextMessage) message;
-                        System.out.println("Subscribe1订阅的消息:" + textMessage.getText());
+                        System.out.println("Subscribe2订阅的消息:" + textMessage.getText());
                     } catch (JMSException e) {
                         e.printStackTrace();
                     }
