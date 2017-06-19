@@ -33,7 +33,7 @@ public class JmsConsumer {
             connection = connectionFactory.createConnection();
             //启动连接
             connection.start();
-            //获取会话session
+            //获取会话session，这里的false表示不添加事务，
             session = connection.createSession(false, Session.AUTO_ACKNOWLEDGE);
             //对消费者来说其目的地就是队列queue
             destination = session.createQueue("ksea");
